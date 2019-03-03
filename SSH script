@@ -3,6 +3,8 @@ $ sudo apt-get update
 
 Install openssh
 $ sudo apt-get install openssh-server openssh-client
+# may encounter error "Unable to lock the administration directory (/var/lib/dpkg/)"
+fix this by https://www.tecmint.com/fix-unable-to-lock-the-administration-directory-var-lib-dpkg-lock/
 
 Generate RSA key pair
 $ ssh-keygen
