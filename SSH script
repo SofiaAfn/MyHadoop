@@ -15,3 +15,11 @@ $ cat id_rsa.pub >> authorized_keys
 
 ssh to localhost
 $ ssh localhost
+
+--what I did after this--
+cd Downloads
+chmod 600 myKey.pem
+ssh -i myKey.pem instance name@public ip
+encountered error Warning: Identity file /Downloads/myKey.pem not accessible: No such file or directory.
+ubuntu@3.18.109.40: Permission denied (publickey).
+Turns out myKey.pem file was missing from .ssh directory, (hidden file, ctrl+h to view) ; pasted it in folder and everything worked!
